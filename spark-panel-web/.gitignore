@@ -1,0 +1,13 @@
+# 本地备份 / 中间产物，不入库
+*.bak*
+*.remote
+*_new.js
+_headers.js
+_v6*_tail.css
+__pycache__/
+Thumbs.db
+desktop.ini
+
+# 由 gzip+base64 还原出来的真实文件（仓库里只存 .gz.b64）
+app_v4.js
+style4.css
