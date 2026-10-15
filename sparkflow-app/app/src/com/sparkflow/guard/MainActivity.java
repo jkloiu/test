@@ -697,7 +697,7 @@ public class MainActivity extends Activity {
                         } else {
                             NotifyJobService.cancel(MainActivity.this);
                         }
-                        String now = AppConfig.base(this) + AppConfig.PAGE_PATH;
+                        String now = AppConfig.base(MainActivity.this) + AppConfig.PAGE_PATH;
                         if (!now.equals(web.getUrl())) {
                             web.loadUrl(now);
                         }
