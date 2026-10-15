@@ -1,0 +1,14 @@
+# 行尾统一 LF：本仓库的文件会原样 SFTP 部署到 Linux 服务器，
+# 绝不能被 git 的 autocrlf 转成 CRLF。
+* text=auto eol=lf
+
+# 二进制资源
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.apk binary
+*.jks binary
+*.idsig binary
