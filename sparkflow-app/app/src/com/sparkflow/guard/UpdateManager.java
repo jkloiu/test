@@ -105,6 +105,7 @@ public final class UpdateManager {
                     if (dest.exists()) {
                         dest.delete();
                     }
+                    long total = -1;
                     Http.download(info.url, dest, new Http.Progress() {
                         public void onProgress(long got, long totalBytes) {
                             if (cb != null && totalBytes > 0) {
@@ -154,7 +155,7 @@ public final class UpdateManager {
             c.startActivity(i);
         } catch (Throwable t) {
             try {
-                Intent i = new Intent(Intent.ACTION_SETTINGS);
+                Intent i = new Intent(Settings.ACTION_SETTINGS);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 c.startActivity(i);
             } catch (Throwable ignore) {
@@ -200,9 +201,9 @@ public final class UpdateManager {
             }
             byte[] d = md.digest();
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < d.length(); i++) {
+            for (int i = 0; i < d.length; i++) {
                 sb.append(Character.forDigit((d[i] >> 4) & 0xF, 16));
-                sb.append(Character.forDigit((d[i] & 0xF), 16));
+                sb.append(Character.forDigit(d[i] & 0xF, 16));
             }
             return sb.toString();
         } catch (Throwable t) {
