@@ -43,7 +43,7 @@ public final class UpdateManager {
     public interface DlCb {
         void onProgress(int percent);
 
-        void void onDone(File apk);
+        void onDone(File apk);
 
         void onError(String msg);
     }
