@@ -7,3 +7,6 @@ _v6*_tail.css
 __pycache__/
 Thumbs.db
 desktop.ini
+
+# 连接器推送用的 gz+base64 中间产物（git 直推不需要）
+*.gz.b64
