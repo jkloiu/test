@@ -110,7 +110,7 @@ public final class NotifyHelper {
         }
         String t = s.replace("\r", "");
         t = t.replaceAll("(?m)^[-─=]{3,}\\s*$", "");
-        t = t.replaceAll("\\n{3,}", "\\n\\n");
+        t = t.replaceAll("\\n{3,}", "\n\n");
         return t.trim();
     }
 }
